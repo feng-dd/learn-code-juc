@@ -5,8 +5,7 @@ package com.feng.juc.week03.myself;
  * @Version 1.0
  * @Date 2021/6/21 16:15
  * @Desc 两阶段终止Demo
- *          1. 当满足某个条件((System.currentTimeMillis() - currentTime) >= mills)时，main线程 通知 executeThread 中断
- *          2.
+ *          当满足某个条件((System.currentTimeMillis() - currentTime) >= mills)时，main线程 通知 executeThread 中断
  * @Since 1.0
  */
 public class Two_phase_Termination_Demo {
