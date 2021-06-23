@@ -12,7 +12,10 @@ public class AlarmManagerTest {
         AlarmManager alarmManager = AlarmManager.getInstance();
         // 初始化告警管理组件 启动一个告警后台线程来上报请求到告警服务器中
         alarmManager.init();
-
+        // 新建一个告警上报线程，并注册到同一个terminationToken的队列中
+//        AlarmSendingThread alarmSendingThread_2 = new AlarmSendingThread();
+//        alarmSendingThread_2.terminationToken.register(alarmSendingThread_2);
+//        alarmSendingThread_2.start();
         // 发送告警任务
         new Thread(() -> {
             int duplicateAlarmNumber = alarmManager.sendAlarm(AlarmType.FAULT, "001", "001告警信息");
