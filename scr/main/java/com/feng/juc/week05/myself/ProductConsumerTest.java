@@ -24,6 +24,9 @@ public class ProductConsumerTest {
         // 消费者
         ExecutorService customerThread = Executors.newFixedThreadPool(3);
 
+        int cpuNum = Runtime.getRuntime().availableProcessors();
+        System.out.println("本机CPU核心数 = " + cpuNum );
+
         productThread.submit(() -> {
             System.out.println("生产消息");
             String msgBody = "消息";
