@@ -11,7 +11,7 @@ import java.util.concurrent.*;
  **/
 public class SmsVerificationCodeManager {
 
-
+    // IO密集型
     private static final ExecutorService EXECUTOR = new ThreadPoolExecutor(1,
                                                                            Runtime.getRuntime().availableProcessors() * 2,
                                                                            60,
